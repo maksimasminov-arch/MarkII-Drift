@@ -73,7 +73,7 @@ func _build_world() -> void:
 				pole.bottom_radius = 0.16
 				pole.height = 1.2
 				post.mesh = pole
-				var radius := ROAD_RADIUS + side * (ROAD_WIDTH * 0.5 + 1.0)
+				var radius: float = ROAD_RADIUS + float(side) * (ROAD_WIDTH * 0.5 + 1.0)
 				post.position = Vector3(cos(mid) * radius, 0.5, sin(mid) * radius)
 				var pm := StandardMaterial3D.new()
 				pm.albedo_color = Color(0.05, 0.7, 1.0) if side > 0 else Color(1.0, 0.18, 0.48)
